@@ -1,0 +1,162 @@
+/* Reset */
+* {
+  margin: 0;  /* Resets margin */
+  padding: 0;
+  box-sizing: border-box; /* Ensures padding and border are included in element's total width and height */
+}
+
+/* Body & Layout */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #b4b7ba; /* Light gray background */
+  color: #333;
+  display: flex; /* Makes the body a flex container */
+  flex-direction: column;
+  min-height: 100vh; /* Ensures body takes full height */
+}
+
+/* Layout container */
+.container {
+  width: 90%; /* Responsive width */
+  max-width: 1200px; /* Maximum width for larger screens */
+  margin: auto; /* Centers the container */
+}
+
+/* Header */
+header {
+  background-color: rgb(57, 180, 193); /* brand color */
+  color: white;
+  padding: 20px 0; /* Padding for header */
+}
+
+.header-container {
+  display: flex; /* Flexbox for header layout */
+  justify-content: space-between; /* Space between logo and nav */
+  align-items: center; /* Center items vertically */
+}
+
+.logo {
+  font-size: 24px; /* Logo font size */
+}
+
+/* Navigation */
+.nav-links {
+  list-style: none; /* Removes default list style */
+  display: flex; /* Displays links horizontally */
+  gap: 20px; /* Space between items/links */
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s ease; /* Smooth color transition */
+}
+
+.nav-links a:hover {
+  color: #ffc107; /* Change color on hover */
+}
+
+/* Main */
+main {
+  flex: 1; /* Allows main to grow and fill available space */
+}
+
+/* Product section */
+.product-section {
+  padding: 40px 0; /* Padding for product section */
+  background-color: #fff;
+  text-align: center;
+}
+
+.product-section h2 {
+  margin-bottom: 30px; /* Space below the heading */
+  font-size: 28px; /* Heading font size */
+}
+
+/* Grid now shows 4 cards per row */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 cards per row */
+  gap: 30px;
+  justify-content: center;
+}
+
+/* Product card */
+.product-card {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px); /* Slight lift on hover */
+}
+
+/* Make all images equal height */
+.product-card img {
+  width: 100%;
+  height: 250px; /* fixed height for consistency */
+  object-fit: cover; /* crops excess while preserving aspect */
+  border-radius: 4px;
+}
+
+.product-card h3 {
+  margin: 15px 0 10px;
+  font-size: 20px;
+}
+
+.product-card p {
+  font-size: 14px;
+  margin-bottom: 15px;
+  color: #555;
+  font-style: italic;
+}
+
+.product-card button {
+  padding: 10px 20px;
+  background-color: #007bff;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.product-card button:hover {
+  background-color: #0056b3;
+}
+
+/* Footer sticks to bottom */
+footer {
+  background-color: rgb(57, 180, 193);
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+  margin-top: auto;
+}
+
+/* Responsive layout */
+@media (max-width: 1024px) {
+  .product-grid {
+    grid-template-columns: repeat(2, 1fr); /* 2 per row on tablets */
+  }
+}
+
+@media (max-width: 768px) {
+  .header-container {
+    flex-direction: column;
+    align-items: flex-start; /* Stack header items vertically */
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+
+  .product-grid {
+    grid-template-columns: 1fr; /* stack on small screens */
+  }
+}

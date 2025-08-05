@@ -36,7 +36,7 @@ Header and navigation adapt layout direction and spacing on smaller screens for 
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/your-username/smarthub-landing-page.git
+   git clone https://github.com/JeffKagiri/Smarthub_Responsive_Store_Landing_Page.git
 ````
 
 2. Navigate to the project directory:
